@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form - Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .form-section {
+            background-color: #e8f4fd;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        fieldset {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+        }
+        
+        legend {
+            font-weight: bold;
+            color: #4CAF50;
+            padding: 0 10px;
+        }
+        
+        label {
+            display: block;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        }
+        
+        input:valid {
+            border-color: #4CAF50;
+        }
+        
+        input:invalid {
+            border-color: #f44336;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .form-row > div {
+            flex: 1;
+        }
+        
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .checkbox-item input, .radio-item input {
+            width: auto;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .reset-btn {
+            background-color: #f44336;
+        }
+        
+        .reset-btn:hover {
+            background-color: #da190b;
+        }
+        
+        .media-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        audio, video {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        ul, ol {
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Enhanced HTML5 Form - Student Registration Portal</h1>
+            <p>This page demonstrates advanced HTML5 features including lists, tables, media content, and comprehensive form validation.</p>
+        </header>
+
+        <!-- Lists Section -->
+        <section class="section">
+            <h2>Course Information</h2>
+            
+            <h3>Available Programming Courses </h3>
+            <ul>
+                <li>Web Development Fundamentals
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript ES6+</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </li>
+                <li>Backend Development
+                    <ul>
+                        <li>Node.js & Express</li>
+                        <li>Python & Django</li>
+                        <li>Database Management</li>
+                    </ul>
+                </li>
+                <li>Mobile App Development
+                    <ul>
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>iOS/Android Native</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Registration Steps (Ordered List)</h3>
+            <ol>
+                <li>Complete the registration form below</li>
+                <li>Submit required documents</li>
+                <li>Pay course fees</li>
+                <li>Attend orientation session</li>
+                <li>Begin coursework</li>
+            </ol>
+
+            <h3>Key Features (Description List)</h3>
+            <dl>
+                <dt>Interactive Learning</dt>
+                <dd>Hands-on projects and real-world applications</dd>
+                
+                <dt>Expert Instructors</dt>
+                <dd>Industry professionals with years of experience</dd>
+                
+                <dt>Flexible Schedule</dt>
+                <dd>Evening and weekend classes available</dd>
+                
+                <dt>Career Support</dt>
+                <dd>Job placement assistance and portfolio development</dd>
+            </dl>
+        </section>
+
+        <!-- Table Section -->
+        <section class="section">
+            <h2>Course Schedule & Pricing</h2>
+            <table>
+                <caption>Available Courses - Fall 2025 Semester</caption>
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Duration</th>
+                        <th>Schedule</th>
+                        <th>Price</th>
+                        <th>Prerequisites</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5 & CSS3 Fundamentals</td>
+                        <td>8 weeks</td>
+                        <td>Mon/Wed 6-8 PM</td>
+                        <td>kes 12909</td>
+                        <td>None</td>
+                        <td>Sarah Thom</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript Advanced</td>
+                        <td>12 weeks</td>
+                        <td>Tue/Thu 6-8 PM</td>
+                        <td>kes 9990</td>
+                        <td>Basic HTML/CSS</td>
+                        <td>Mike Zangu</td>
+                    </tr>
+                    <tr>
+                        <td>React Development</td>
+                        <td>10 weeks</td>
+                        <td>Sat 9 AM-12 PM</td>
+                        <td>kes 50000</td>
+                        <td>JavaScript Knowledge</td>
+                        <td>Emily Wake</td>
+                    </tr>
+                    <tr>
+                        <td>Node.js Backend</td>
+                        <td>14 weeks</td>
+                        <td>Sun 1-4 PM</td>
+                        <td>kes 70000</td>
+                        <td>JavaScript, Basic Database</td>
+                        <td>David Wao</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Total Available Courses:</strong></td>
+                        <td><strong>4 Courses</strong></td>
+                        <td colspan="2"><strong>All skill levels welcome</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section class="section media-section">
+            <h2>Campus Tour & Resources</h2>
+            
+            <h3>Welcome Video</h3>
+            <!-- <video controls poster="https://via.placeholder.com/600x300/4CAF50/white?text=Campus+Tour">
+                <source src="campus-tour.mp4" type="video/mp4">
+                <source src="campus-tour.webm" type="video/webm">
+                <p>Your browser doesn't support video playback. <a href="campus-tour.mp4">Download the video</a> to watch.</p>
+            </video> -->
+            <iframe src="https://www.youtube.com/embed/nXY8GGObaT4" frameborder="0" 
+        allowfullscreen 
+        width="600" 
+        height="400"></iframe>
+
+            <h3>Student Success Stories</h3>
+            <audio controls>
+                <source src="success-stories.mp3" type="audio/mpeg">
+                <source src="success-stories.ogg" type="audio/ogg">
+                <p>Your browser doesn't support audio playback. <a href="success-stories.mp3">Download the audio</a> to listen.</p>
+            </audio>
+
+            <h3>Modern Learning Environment</h3>
+            <figure>
+                <img src="computer_lab.jpg" alt="Modern computer lab with latest technology">
+                <figcaption>Our state-of-the-art computer lab equipped with the latest technology</figcaption>
+            </figure>
+        </section>
+
+        <!-- Enhanced Form Section -->
+        <section class="form-section">
+            <h2>Student Registration Form</h2>
+            
+            <div class="highlight">
+                <strong>Important:</strong> All fields marked with an asterisk (*) are required. Please ensure all information is accurate before submitting.
+            </div>
+
+            <form action=" " method="post" novalidate>
+                
+                <!-- Personal Information Fieldset -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required minlength="2" maxlength="50" 
+                                   pattern="[A-Za-z\s]+" placeholder="Enter your first name"
+                                   title="Please enter a valid first name (letters only)">
+                        </div>
+                        <div>
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required minlength="2" maxlength="50" 
+                                   pattern="[A-Za-z\s]+" placeholder="Enter your last name"
+                                   title="Please enter a valid last name (letters only)">
+                        </div>
+                    </div>
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="your.email@example.com"
+                           title="Please enter a valid email address">
+
+                    <div class="form-row">
+                        <div>
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   pattern="[\+]?[0-9\s\-\(\)]{10,}" 
+                                   placeholder="+254 (123) 456-789"
+                                   title="Please enter a valid phone number">
+                        </div>
+                        <div>
+                            <label for="birthDate">Date of Birth *</label>
+                            <input type="date" id="birthDate" name="birthDate" required 
+                                   min="1950-01-01" max="2010-12-31"
+                                   title="You must be between 15-75 years old">
+                        </div>
+                    </div>
+
+                    <label for="address">Street Address *</label>
+                    <input type="text" id="address" name="address" required 
+                           placeholder="123 Main Street"
+                           title="Please enter your complete street address">
+
+                    <div class="form-row">
+                        <div>
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required 
+                                   placeholder="Your city"
+                                   title="Please enter your city">
+                        </div>
+                        <div>
+                            <label for="zipCode">ZIP Code *</label>
+                            <input type="text" id="zipCode" name="zipCode" required 
+                                   pattern="[0-9]{5}(-[0-9]{4})?" 
+                                   placeholder="12345 or 12345-6789"
+                                   title="Please enter a valid ZIP code">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Academic Information Fieldset -->
+                <fieldset>
+                    <legend>Academic Information</legend>
+                    
+                    <label for="studentId">Student ID (if existing student)</label>
+                    <input type="text" id="studentId" name="studentId" 
+                           pattern="[A-Z]{2}[0-9]{6}" 
+                           placeholder="AB123456" maxlength="8"
+                           title="Format: Two letters followed by six digits">
+
+                    <label for="educationLevel">Highest Education Level *</label>
+                    <select id="educationLevel" name="educationLevel" required>
+                        <option value="">Please select...</option>
+                        <option value="high-school">High School</option>
+                        <option value="some-college">Some College</option>
+                        <option value="associate">Associate Degree</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="doctorate">Doctorate</option>
+                    </select>
+
+                    <label for="major">Current/Previous Major</label>
+                    <input type="text" id="major" name="major" 
+                           placeholder="Computer Science, Business, etc."
+                           list="majors">
+                    <datalist id="majors">
+                        <option value="Computer Science">
+                        <option value="Information Technology">
+                        <option value="Business Administration">
+                        <option value="Engineering">
+                        <option value="Mathematics">
+                        <option value="Graphic Design">
+                    </datalist>
+
+                    <label for="gpa">GPA (if applicable)</label>
+                    <input type="number" id="gpa" name="gpa" 
+                           min="0" max="4" step="0.01" 
+                           placeholder="3.75"
+                           title="GPA should be between 0.00 and 4.00">
+
+                    <label for="graduationYear">Expected/Actual Graduation Year</label>
+                    <input type="number" id="graduationYear" name="graduationYear" 
+                           min="2020" max="2030" 
+                           placeholder="2025">
+                </fieldset>
+
+                <!-- Course Selection Fieldset -->
+                <fieldset>
+                    <legend>Course Selection</legend>
+                    
+                    <label for="primaryCourse">Primary Course Interest *</label>
+                    <select id="primaryCourse" name="primaryCourse" required>
+                        <option value="">Please select a course...</option>
+                        <option value="web-fundamentals">Web Development Fundamentals</option>
+                        <option value="javascript-advanced">Advanced JavaScript</option>
+                        <option value="react-development">React Development</option>
+                        <option value="nodejs-backend">Node.js Backend Development</option>
+                        <option value="python-django">Python & Django</option>
+                        <option value="mobile-development">Mobile App Development</option>
+                    </select>
+
+                    <label>Additional Courses of Interest (check all that apply):</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="htmlcss" name="additionalCourses" value="html-css">
+                            <label for="htmlcss">HTML & CSS</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="javascript" name="additionalCourses" value="javascript">
+                            <label for="javascript">JavaScript</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="database" name="additionalCourses" value="database">
+                            <label for="database">Database Design</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="uiux" name="additionalCourses" value="ui-ux">
+                            <label for="uiux">UI/UX Design</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cybersecurity" name="additionalCourses" value="cybersecurity">
+                            <label for="cybersecurity">Cybersecurity</label>
+                        </div>
+                    </div>
+
+                    <label>Preferred Learning Mode *</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="inPerson" name="learningMode" value="in-person" required>
+                            <label for="inPerson">In-Person</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="online" name="learningMode" value="online" required>
+                            <label for="online">Online</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="hybrid" name="learningMode" value="hybrid" required>
+                            <label for="hybrid">Hybrid</label>
+                        </div>
+                    </div>
+
+                    <label for="schedule">Preferred Schedule *</label>
+                    <select id="schedule" name="schedule" required>
+                        <option value="">Please select...</option>
+                        <option value="morning">Morning (9 AM - 12 PM)</option>
+                        <option value="afternoon">Afternoon (1 PM - 4 PM)</option>
+                        <option value="evening">Evening (6 PM - 9 PM)</option>
+                        <option value="weekend">Weekend</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+
+                    <label for="startDate">Preferred Start Date *</label>
+                    <input type="date" id="startDate" name="startDate" required 
+                           min="2025-09-01" 
+                           title="Course start date cannot be in the past">
+                </fieldset>
+
+                <!-- Experience & Goals Fieldset -->
+                <fieldset>
+                    <legend>Experience & Goals</legend>
+                    
+                    <label for="experience">Programming Experience Level *</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Please select...</option>
+                        <option value="beginner">Beginner (No experience)</option>
+                        <option value="some-basics">Some Basics (HTML/CSS)</option>
+                        <option value="intermediate">Intermediate (Some programming)</option>
+                        <option value="advanced">Advanced (Multiple languages)</option>
+                        <option value="professional">Professional (Work experience)</option>
+                    </select>
+
+                    <label for="goals">Career Goals & Motivation *</label>
+                    <textarea id="goals" name="goals" rows="4" required 
+                              minlength="50" maxlength="1000"
+                              placeholder="Tell us about your career goals and what motivates you to learn programming..."
+                              title="Please describe your goals in at least 50 characters"></textarea>
+
+                    <label for="portfolio">Portfolio/LinkedIn URL</label>
+                    <input type="url" id="portfolio" name="portfolio" 
+                           placeholder="https://your-portfolio.com or https://linkedin.com/in/yourname"
+                           title="Please enter a valid URL">
+
+                    <label for="referral">How did you hear about us?</label>
+                    <select id="referral" name="referral">
+                        <option value="">Please select...</option>
+                        <option value="google">Google Search</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="friend">Friend/Family</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="school">School/University</option>
+                        <option value="other">Other</option>
+                    </select>
+                </fieldset>
+
+                <!-- Agreement & Submission -->
+                <fieldset>
+                    <legend>Agreement & Submission</legend>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms of Service and Privacy Policy *</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for course updates and programming tips</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="contact" name="contact">
+                        <label for="contact">I consent to be contacted about course information</label>
+                    </div>
+
+                    <label for="comments">Additional Comments or Questions</label>
+                    <textarea id="comments" name="comments" rows="3" 
+                              placeholder="Any additional information you'd like to share..."
+                              maxlength="500"></textarea>
+
+                    <div style="margin-top: 30px; text-align: center;">
+                        <button type="submit">Submit Registration</button>
+                        <button type="reset" class="reset-btn">Reset Form</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer style="text-align: center; margin-top: 40px; padding: 20px; background-color: #333; color: white; border-radius: 5px;">
+            <p>&copy; 2025 Student Registration Portal. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@example.com" style="color: #4CAF50;">info@example.com</a> | Phone: (555) 123-4567</p>
+        </footer>
+    </div>
+</body>
+</html>
